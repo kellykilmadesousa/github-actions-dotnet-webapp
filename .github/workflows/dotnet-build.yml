@@ -18,7 +18,7 @@ jobs:
             - name: Set up .NET Core
               uses: actions/setup-dotnet@v3
               with:
-                dotnet-version: 1.0.0
+                dotnet-version: 8.0.301
 
             - name: script test
               run: echo "Hello test"
