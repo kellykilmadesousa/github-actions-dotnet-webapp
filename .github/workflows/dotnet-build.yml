@@ -23,6 +23,10 @@ jobs:
             - name: script test
               run: echo "Hello test"
 
+            - name: Build 
+              run: dotnet build github4women/github4women.csproj --no-restore
+
+              
 
             
 
