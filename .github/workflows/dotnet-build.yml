@@ -23,9 +23,6 @@ jobs:
             - name: script test
               run: echo "Hello test"
 
-            - name: Build
-              run: dotnet build **/*.csproj --no-restore
-
 
             
 
