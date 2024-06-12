@@ -1,0 +1,32 @@
+name: First Actions Test
+
+on:
+    push:
+        branches:
+            - main
+    schedule: 
+            - cron: 0 * * * *
+
+jobs:
+    build: 
+        runs-on: ubuntu-latest
+
+        steps: 
+            - name: checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up .NET Core
+              uses: actions/setup-dotnet@v3
+              with:
+                dotnet-version: 1.0.0
+
+            - name: script test
+              run: echo "Hello test"
+
+            - name: Build
+              run: dotnet build **/*.csproj --no-restore
+
+
+            
+
+
